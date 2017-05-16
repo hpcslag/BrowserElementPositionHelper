@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>BrowserElementPositionHelper</title>
+	<style type="text/css">
+		html,body{
+			margin: 0px;
+			height: 100%;
+			overflow: hidden;
+		}
+
+		iframe{
+			height: 100%;
+			border:0px;
+			overflow:hidden;
+			z-index: -1;
+		}
+		#feature{
+			display: none;
+			z-index: 1000;
+			background: rgba(0, 0, 0, 0.35);
+			position: absolute;
+		    left: 0;
+		    top: 0;
+		    width: 100%;
+		    height: 100%;
+		}
+	</style>
+</head>
+<body>
+<div id="bar">
+	<p>Please Enter URL:</p><input type="text" id="url" value="http://dmm.com" name="">
+	<br>
+	<p>Please Enter Equals Part Of Grid (Equals now <span id="win_info">weight:<script>document.write(window.innerWidth || document.body.clientWidth);</script>, height:<script>document.write(window.innerHeight || document.body.clientHeight);</script></span>):</p><input type="number" id="url" value="" name="">
+	<br>
+	<input id="urlsubmit" type="submit" name="" value="Catch It">
+	<br>
+</div>
+<div id="feature"></div>
+<iframe src="http://yahoo.com" style="visibility:visible" width="100%" id="frame"></iframe>
+<script src="./main.js"></script>
+</body>
+</html>
